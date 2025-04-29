@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
 }
 .signup-page{
   display: flex;
@@ -37,6 +37,10 @@
   display: flex;
   margin-bottom: 70px;
 }
+.text-container a{
+  color: #4F4D46;
+  text-decoration: none;
+}
 .text-container hr{
   width: 100px;
   height: 2px;
@@ -44,11 +48,17 @@
   border: 0px;
   margin-top: 4px;
 }
+.login-txt a{
+  color: #E0B689;
+}
+.login-txt hr{
+  background-color: #E0B689;
+}
 .signup-txt hr{
   background-color: #E0B689;
 }
 
-.signup-txt{
+.signup-txt a{
   color: #E0B689;
 }
 
@@ -71,7 +81,7 @@
   font-size: 14px;
   color: #4F4D46;
 }
-.btn{
+.btn , .btn-grade{
   width: 60%;
   max-width: 200px;
   height: 50px;
@@ -92,6 +102,82 @@
   margin-bottom: 10px;
   font-size: 14px;
 }
+.grade-section{
+  background-image: linear-gradient(#00000036),url("../images/img2.png");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  display:flexbox;
+  
+}
+.grade-text{
+  width: 50%;
+  height: 80vh;
+  padding: 30px;
+  flex-direction: column;
+}
+.grade-text h2{
+  display: flex;
+  margin:50px;
+  font-size:48px;
+}
+
+.grade-text p{
+  display: flex;
+  margin:100px;
+  font-size:larger;
+} 
+.btn-grade{
+  background-color: #FAF5F0;
+  border: 1px solid #4F4D46;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 80px;
+  color: #4F4D46;
+}
+.btn-grade a{
+  text-decoration: none;
+  color: #4F4D46;
+}
+.btn-grade:hover{
+  background-color: #faf5f0d6;
+  color: #4f4d46c8;
+  border: 1px solid #4f4d46c8;
+
+}
+
+
+.choice-container{
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1.8rem;
+  border: 1.0 rem solid chocolate;
+  background-color: #EEDECD;
+}
+.choice-container:hover{
+  cursor: pointer;
+  background-color: #e0b689be;
+
+}
+.choice-prefix{
+  padding: 1.5rem 1.2rem;
+  background-color: #E0B689;
+  color: white;
+}
+.choice-text{
+  padding: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 480px) {
   .signup-page {

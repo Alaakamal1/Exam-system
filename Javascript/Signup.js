@@ -23,17 +23,17 @@ document.getElementById("signupform").addEventListener("submit",function(event){
 
   var email=document.getElementById("email").value;
   if(email.trim()===""){
-    errorEmail.textContent="you must input your email";
+    errorEmail.Content="you must input your email";
   }
   else if(!RegEmail.test(email)){
-    errorEmail.textContent="your email is not vaild";
+    errorEmail.Content="your email is not vaild";
   }else{
-    errorEmail.textContent="";
+    errorEmail.Content="";
   }
 
   var password=document.getElementById("password").value;
   if(password.trim()===""){
-    errorpassword.textContent="you must input your email";
+    errorpassword.textContent="you must input your password";
   }
   else if(!RegPassword.test(password)){
     errorpassword.textContent="your password must have at least 1 number & 1 char & special letters";
@@ -61,7 +61,7 @@ document.getElementById("signupform").addEventListener("submit",function(event){
   localStorage.setItem("userData", JSON.stringify(userData));
   if (
     errorUsername.textContent === "" &&
-    errorEmail.textContent === "" &&
+    errorEmail.Content === "" &&
     errorpassword.textContent === "" &&
     errorConfPass.textContent === ""
   ) {
@@ -74,7 +74,7 @@ document.getElementById("username").addEventListener("input", function () {
 });
 
 document.getElementById("email").addEventListener("input", function () {
-  if (RegEmail.test(this.value)) errorEmail.textContent = "";
+  if (RegEmail.test(this.value))  errorEmail.Content = "";
 });
 
 document.getElementById("password").addEventListener("input", function () {
@@ -86,6 +86,52 @@ document.getElementById("Confirmpassword").addEventListener("input", function ()
 });
 
 
+
+var errorEmailLogin=document.getElementById("error-email-login");
+var errorpasswordLogin=document.getElementById("error-password-login");
+
+
+document.getElementById("loginform").addEventListener("submit",function(event){
+  event.preventDefault();
+ 
+  const user = JSON.parse(localStorage.getItem("userData"));
+  emailconf=user.email;
+  passconf=user.password;
+  var emailLogin=document.getElementById("email-login").value;
+  if( emailLogin.trim()===""){
+    errorEmailLogin.textContent="you must input your email";
+  }
+  else if(!RegEmail.test( emailLogin) ||  emailLogin !==  emailconf){
+    errorEmailLogin.textContent="your email is not vaild";
+  }else{
+    errorEmailLogin.Content="";
+  }
+
+  var passwordLogin=document.getElementById("password-login").value;
+  if(passwordLogin.trim()===""){
+    errorpassword.textContent="you must input your password";
+  }
+  else if(!RegPassword.test(passwordLogin) || passwordLogin !==  passconf){
+    errorpassword.textContent="Incorrect password";
+  }else{
+    errorpassword.textContent="";
+  }
+
+  if (
+    errorEmailLogin.Content === "" &&
+    errorpassword.textContent === ""
+  ) {
+    window.location.href = "../Html/Exam.html"; 
+  }
+});
+
+document.getElementById("email-login").addEventListener("input", function () {
+  if (RegEmail.test(this.value))  errorEmailLogin.Content = "";
+});
+
+document.getElementById("password-login").addEventListener("input", function () {
+  if (RegPassword.test(this.value)) errorpassword.textContent = "";
+});
 
 // استدعاء بصفحه تانيه
 
