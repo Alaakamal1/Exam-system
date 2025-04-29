@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signup</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="signup-page">
+      <aside class="sideimage">
+        <img src="./images/img1.jpg" alt="signupImage" />
+      </aside>
+      <aside class="sideText">
+        <div class="aside-text">
+          <div class="form-text-container sansita-regular">
+            <div class="text-container">
+              <p>Login</p>
+              <hr />
+            </div>
+            <div class="text-container signup-txt">
+              <p>sign up</p>
+              <hr />
+            </div>
+          </div>
+          <div class="form-input">
+            <form id="signupform">
+              <input
+                class="inputform"
+                id="username"
+                type="text"
+                placeholder="username"
+                name="username"
+                autocomplete="off"
+              />
+              <span id="error-username" class="error sansita-regular"></span>
+              <input
+                class="inputform"
+                id="email"
+                type="text"
+                placeholder="email"
+                name="email"
+                autocomplete="off"
+              />
+              <span id="error-email" class="error sansita-regular"></span>
+              <input
+                class="inputform"
+                id="password"
+                type="password"
+                placeholder="password"
+                name="password"
+                autocomplete="off"
+              />
+              <span id="error-password" class="error sansita-regular"></span>
+              <input
+                class="inputform"
+                id="Confirmpassword"
+                type="password"
+                placeholder="Confirmpassword"
+                name="Confirmpassword"
+                autocomplete="off"
+              />
+              <span id="error-Confirmpassword" class="error sansita-regular"></span>
+              <button class="btn sansita-regular">Sign up</button>
+            </form>
+          </div>
+        </div>
+      </aside>
+    </section>
+    <script src="Signup.js"></script>
+  </body>
+</html>
