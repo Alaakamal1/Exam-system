@@ -26,11 +26,8 @@ document.getElementById("loginform").addEventListener("submit",function(event){
     errorpassword.textContent="you must input your email";
   }
   else if(!RegPassword.test(password) || password !==  passconf){
-//Examination
     errorpassword.textContent="Incorrect password";
-
     errorpassword.textContent="your password must have at least 1 number & 1 char & special letters";
-//main
   }else{
     errorpassword.textContent="";
   }
@@ -39,7 +36,7 @@ document.getElementById("loginform").addEventListener("submit",function(event){
     errorEmail.textContent === "" &&
     errorpassword.textContent === ""
   ) {
-    window.location.href = "../Html/Exam.html"; 
+    window.location.href = "../Html/Examination.html"; 
   }
 });
 

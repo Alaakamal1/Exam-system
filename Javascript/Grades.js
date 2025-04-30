@@ -1,6 +1,7 @@
 // كود مبدئي
 
-// const user = JSON.parse(localStorage.getItem("userData"));
+const result = JSON.parse(localStorage.getItem('examResults'));
+
 let gradeText=document.getElementsByTagName('div')[0];
 let quote=document.createElement('p');
 let retrayBtn=document.createElement('button');
@@ -9,13 +10,13 @@ let greating=document.createElement('h2');
 let quoteText="";
 let retrayBtnText="";
 let greatingText="";
-let score=4;
-let time = 0;
+let score=result.score;
+let time = result.timeLeft;
 if (time === 0) {
   let timeText = document.createTextNode(`Your time is up `);
   gradeText.append(texttimeout);
   texttimeout.appendChild(timeText);
-  if(score >= 6){
+  if(score >= 5){
     greatingText=document.createTextNode(`Congratulation`);
     quoteText = document.createTextNode(`Your grade is ${score*10}%You did it! This is just the beginning—keep shining`);
     gradeText.append(greating);
