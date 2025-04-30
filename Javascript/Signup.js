@@ -65,7 +65,7 @@ document.getElementById("signupform").addEventListener("submit",function(event){
     };
   
     localStorage.setItem("userData", JSON.stringify(userData));
-    window.location.href = "../Html/Login.html";
+    window.location.href = "../Html/Login.html"; 
   }
 });
 
