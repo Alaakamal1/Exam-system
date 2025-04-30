@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <link rel="stylesheet" href="../css/Examination.css">
+        
+</head>
+<body>
+    <div class="timer-container">
+        <div class="timer">Time left: <span id="minutes">05</span>:<span id="seconds">00</span></div>
+    </div>
+
+    <div id="questions-container">
+        <div class="question-card" data-question="1">
+            <div class="question-header">
+                <h2 class="question-title">Question 1</h2>
+                <button class="flag-button">🚩</button>
+            </div>
+            <p class="question-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacus velit a vulputate ac, consectetur et interdum. Nisi luctus rhoncus, dui eras nisi facilisi
+            </p>
+            <div class="options-grid">
+                <button class="option-button" data-option="A">Option A</button>
+                <button class="option-button" data-option="B">Option B</button>
+                <button class="option-button" data-option="C">Option C</button>
+                <button class="option-button" data-option="D">Option D</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation-buttons">
+        <button class="nav-button" id="prevBtn">Previous</button>
+        <button class="nav-button hidden" id="submitBtn">Submit</button>
+        <button class="nav-button" id="nextBtn">Next</button>
+    </div>
+
+    <div class="question-numbers">
+        <button class="number-button active">1</button>
+        <button class="number-button">2</button>
+        <button class="number-button">3</button>
+        <button class="number-button">4</button>
+        <button class="number-button">5</button>
+        <button class="number-button">6</button>
+        <button class="number-button">7</button>
+        <button class="number-button">8</button>
+        <button class="number-button">9</button>
+        <button class="number-button">10</button>
+    </div>
+
+    <script src="../Javascript/Examination.js"></script>
+</body>
+</html> 
