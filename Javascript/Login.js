@@ -27,7 +27,11 @@ document.getElementById("loginform").addEventListener("submit",function(event){
     errorpassword.textContent="you must input your email";
   }
   else if(!RegPassword.test(password) || password !==  passconf){
+//Examination
     errorpassword.textContent="Incorrect password";
+
+    errorpassword.textContent="your password must have at least 1 number & 1 char & special letters";
+//main
   }else{
     errorpassword.textContent="";
   }
