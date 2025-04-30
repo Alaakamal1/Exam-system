@@ -1,17 +1,17 @@
-var RegUserName=/^[a-zA-Z]{3,15}$/;
-var RegEmail= /^[a-zA-Z0-9]{3,15}@(yahoo|gmail|su.edu.eg)\.com$/;
-var RegPassword=/^[0-9A-Za-z.!@#$%&]{6,20}$/;
-var RegConfPassword=/^[0-9A-Za-z!@#$%&]{6,20}$/;
+let RegUserName=/^[a-zA-Z]{3,15}$/;
+let RegEmail= /^[a-zA-Z0-9]{3,15}@(yahoo|gmail|su.edu.eg)\.com$/;
+let RegPassword=/^[0-9A-Za-z.!@#$%&]{6,20}$/;
+let RegConfPassword=/^[0-9A-Za-z!@#$%&]{6,20}$/;
 
-var errorUsername=document.getElementById("error-username");
-var errorEmail=document.getElementById("error-email");
-var errorpassword=document.getElementById("error-password");
-var errorConfPass=document.getElementById("error-Confirmpassword");
+let errorUsername=document.getElementById("error-username");
+let errorEmail=document.getElementById("error-email");
+let errorpassword=document.getElementById("error-password");
+let errorConfPass=document.getElementById("error-Confirmpassword");
 
 
 document.getElementById("signupform").addEventListener("submit",function(event){
   event.preventDefault();
-  var username=document.getElementById("username").value;
+  let username=document.getElementById("username").value;
   if(username.trim()===""){
     errorUsername.textContent="you must input your username";
   }
@@ -21,7 +21,7 @@ document.getElementById("signupform").addEventListener("submit",function(event){
     errorUsername.textContent="";
   }
 
-  var email=document.getElementById("email").value;
+  let email=document.getElementById("email").value;
   if(email.trim()===""){
     errorEmail.textContent="you must input your email";
   }
@@ -31,9 +31,9 @@ document.getElementById("signupform").addEventListener("submit",function(event){
     errorEmail.textContent="";
   }
 
-  var password=document.getElementById("password").value;
+  let password=document.getElementById("password").value;
   if(password.trim()===""){
-    errorpassword.textContent="you must input your email";
+    errorpassword.textContent="you must input your password";
   }
   else if(!RegPassword.test(password)){
     errorpassword.textContent="your password must have at least 1 number & 1 char & special letters";
@@ -41,7 +41,7 @@ document.getElementById("signupform").addEventListener("submit",function(event){
     errorpassword.textContent="";
   }
 
-  var confPassword=document.getElementById("Confirmpassword").value;
+  let confPassword=document.getElementById("Confirmpassword").value;
   if(confPassword.trim()===""){
     errorConfPass.textContent="you must input Confirmpassword";
   }
@@ -51,22 +51,21 @@ document.getElementById("signupform").addEventListener("submit",function(event){
     errorConfPass.textContent="";
   }
   
-  const userData = {
-    username: username,
-    email: email,
-    password:password,
-    confirmpassword:confPassword
-  };
-
-  localStorage.setItem("userData", JSON.stringify(userData));
   if (
     errorUsername.textContent === "" &&
     errorEmail.textContent === "" &&
     errorpassword.textContent === "" &&
     errorConfPass.textContent === ""
   ) {
+    const userData = {
+      username: username,
+      email: email,
+      password: password,
+      confirmpassword: confPassword
+    };
+  
+    localStorage.setItem("userData", JSON.stringify(userData));
     window.location.href = "../Html/Login.html"; 
-
   }
 });
 
@@ -75,7 +74,7 @@ document.getElementById("username").addEventListener("input", function () {
 });
 
 document.getElementById("email").addEventListener("input", function () {
-  if (RegEmail.test(this.value)) errorEmail.textContent = "";
+  if (RegEmail.test(this.value))  errorEmail.textContent = "";
 });
 
 document.getElementById("password").addEventListener("input", function () {
@@ -84,6 +83,54 @@ document.getElementById("password").addEventListener("input", function () {
 
 document.getElementById("Confirmpassword").addEventListener("input", function () {
   if (this.value === document.getElementById("password").value) errorConfPass.textContent = "";
+});
+
+
+
+
+/////////////login
+
+
+document.getElementById("loginform").addEventListener("submit",function(event){
+  event.preventDefault();
+ 
+  const user = JSON.parse(localStorage.getItem("userData"));
+  emailconf=user.email;
+  passconf=user.password;
+  let email=document.getElementById("email-login").value;
+  if(email.trim()===""){
+    errorEmail.textContent="you must input your email";
+  }
+  else if(!RegEmail.test(email) || email !==  emailconf){
+    errorEmail.textContent="your email is not vaild";
+  }else{
+    errorEmail.textContent="";
+  }
+
+  let password=document.getElementById("password-login").value;
+  if(password.trim()===""){
+    errorpassword.textContent="you must input your email";
+  }
+  else if(!RegPassword.test(password) || password !==  passconf){
+    errorpassword.textContent="Incorrect password";
+  }else{
+    errorpassword.textContent="";
+  }
+
+  if (
+    errorEmail.textContent === "" &&
+    errorpassword.textContent === ""
+  ) {
+    window.location.href = "../Html/Exam.html"; 
+  }
+});
+
+document.getElementById("email-login").addEventListener("input", function () {
+  if (RegEmail.test(this.value)) errorEmail.textContent = "";
+});
+
+document.getElementById("password-login").addEventListener("input", function () {
+  if (RegPassword.test(this.value)) errorpassword.textContent = "";
 });
 
 

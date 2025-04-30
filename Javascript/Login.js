@@ -1,9 +1,8 @@
 
 var RegEmail= /^[a-zA-Z0-9]{3,15}@(yahoo|gmail|su.edu.eg)\.com$/;
 var RegPassword=/^[0-9A-Za-z.!@#$%&]{6,20}$/;
-
-var errorEmail=document.getElementById("error-email");
-var errorpassword=document.getElementById("error-password");
+var errorEmail=document.getElementById("error-email-login");
+var errorpassword=document.getElementById("error-password-login");
 
 
 document.getElementById("loginform").addEventListener("submit",function(event){
@@ -12,7 +11,7 @@ document.getElementById("loginform").addEventListener("submit",function(event){
   const user = JSON.parse(localStorage.getItem("userData"));
   emailconf=user.email;
   passconf=user.password;
-  var email=document.getElementById("email").value;
+  var email=document.getElementById("email-login").value;
   if(email.trim()===""){
     errorEmail.textContent="you must input your email";
   }
@@ -22,7 +21,7 @@ document.getElementById("loginform").addEventListener("submit",function(event){
     errorEmail.textContent="";
   }
 
-  var password=document.getElementById("password").value;
+  var password=document.getElementById("password-login").value;
   if(password.trim()===""){
     errorpassword.textContent="you must input your email";
   }
@@ -40,15 +39,15 @@ document.getElementById("loginform").addEventListener("submit",function(event){
     errorEmail.textContent === "" &&
     errorpassword.textContent === ""
   ) {
-    window.location.href = "Test.html"; 
+    window.location.href = "../Html/Exam.html"; 
   }
 });
 
-document.getElementById("email").addEventListener("input", function () {
+document.getElementById("email-login").addEventListener("input", function () {
   if (RegEmail.test(this.value)) errorEmail.textContent = "";
 });
 
-document.getElementById("password").addEventListener("input", function () {
+document.getElementById("password-login").addEventListener("input", function () {
   if (RegPassword.test(this.value)) errorpassword.textContent = "";
 });
 
