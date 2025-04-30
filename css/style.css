@@ -168,17 +168,6 @@
 .choice-text{
   padding: 1.5rem;
 }
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 480px) {
   .signup-page {
     flex-direction: column;
@@ -233,7 +222,6 @@
     max-width: 400px;
   }
 }
-
 @media (min-width: 767.99px) and (max-width: 1024px) {
   .signup-page {
     flex-direction: row;
