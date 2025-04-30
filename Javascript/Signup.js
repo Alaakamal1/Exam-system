@@ -65,7 +65,8 @@ document.getElementById("signupform").addEventListener("submit",function(event){
     errorpassword.textContent === "" &&
     errorConfPass.textContent === ""
   ) {
-    window.location.href = "Login.html"; 
+    window.location.href = "../Html/Login.html"; 
+
   }
 });
 
