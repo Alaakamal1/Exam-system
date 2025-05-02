@@ -20,7 +20,6 @@ document.getElementById("loginform").addEventListener("submit",function(event){
   }else{
     errorEmail.textContent="";
   }
-
   var password=document.getElementById("password-login").value;
   if(password.trim()===""){
     errorpassword.textContent="you must input your email";

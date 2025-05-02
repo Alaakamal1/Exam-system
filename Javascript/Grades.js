@@ -1,5 +1,3 @@
-// كود مبدئي
-
 const result = JSON.parse(localStorage.getItem('examResults'));
 
 let gradeText=document.getElementsByTagName('div')[0];
