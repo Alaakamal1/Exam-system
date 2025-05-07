@@ -1,3 +1,82 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <link rel="stylesheet" href="../css/Examination.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="timer-container  ">
+        <div class="timer sansita-regular">
+            <p class="timer__text">Time left</p>
+        <span id="minutes" class="number-button-timer">1</span>:<span id="seconds" class="number-button-timer">00</span></div>
+    </div>
+
+    <div id="questions-container">
+        <div class="question-card" data-question="1">
+            <div class="question-header">
+                <h2 class="question-title">Question 1</h2>
+                <button class="flag-button"><img id="flagimg" src="../images/Vector-1.png"/></button>
+            </div>
+            <p class="question-text"></p>
+            <div class="options-grid">
+                <button class="option-button sansita-regular" data-option="A"></button>
+                <button class="option-button sansita-regular" data-option="B"></button>
+                <button class="option-button sansita-regular" data-option="C"></button>
+                <button class="option-button sansita-regular" data-option="D"></button>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div id="questions-container">
+        <div class="question-card" data-question="1">
+            <div class="question-header">
+                <h2 class="question-title">Question 1</h2>
+                <button class="flag-button"><img id="flagimg" src="../images/Vector-1.png"/></button>
+            </div>
+            <p class="question-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacus velit a vulputate ac, consectetur et interdum. Nisi luctus rhoncus, dui eras nisi facilisi
+            </p>
+            <div class="options-grid ">
+                <button class="option-button sansita-regular" data-option="A">Option A</button>
+                <button class="option-button sansita-regular" data-option="B">Option B</button>
+                <button class="option-button sansita-regular" data-option="C">Option C</button>
+                <button class="option-button sansita-regular" data-option="D">Option D</button>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="navigation-buttons">
+        <button class="nav-button sansita-regular" id="prevBtn">Previous</button>
+        <button class="nav-button hidden sansita-regular" id="submitBtn">Submit</button>
+        <button class="nav-button sansita-regular" id="nextBtn">Next</button>
+    </div>
+
+    <div class="question-numbers">
+        <button class="number-button active">1</button>
+        <button class="number-button">2</button>
+        <button class="number-button">3</button>
+        <button class="number-button">4</button>
+        <button class="number-button">5</button>
+        <button class="number-button">6</button>
+        <button class="number-button">7</button>
+        <button class="number-button">8</button>
+        <button class="number-button">9</button>
+        <button class="number-button">10</button>
+    </div>
+
+    <script src="../Javascript/Examination.js"></script>
+</body>
+</html>  -->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,26 +88,24 @@
 </head>
 <body>
     <div class="timer-container">
-        <div class="timer">Time left: <span id="minutes">05</span>:<span id="seconds">00</span></div>
+        <div class="timer">Time left: <span id="minutes">02</span>:<span id="seconds">00</span></div>
     </div>
-
     <div id="questions-container">
-        <div class="question-card" data-question="1">
+        <div class="question-card" >
             <div class="question-header">
-                <h2 class="question-title">Question 1</h2>
+                <h2 class="question-title"></h2>
                 <button class="flag-button">🚩</button>
             </div>
-            <p class="question-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacus velit a vulputate ac, consectetur et interdum. Nisi luctus rhoncus, dui eras nisi facilisi
-            </p>
-            <div class="options-grid">
-                <button class="option-button" data-option="A">Option A</button>
-                <button class="option-button" data-option="B">Option B</button>
-                <button class="option-button" data-option="C">Option C</button>
-                <button class="option-button" data-option="D">Option D</button>
+            <p class="question-text" id="question-text"></p>
+            <div class="options-grid" id="options-container"></div>
+
+   
+
+  
             </div>
         </div>
     </div>
+    
 
     <div class="navigation-buttons">
         <button class="nav-button" id="prevBtn">Previous</button>
@@ -48,6 +125,7 @@
         <button class="number-button">9</button>
         <button class="number-button">10</button>
     </div>
+    
 
     <script src="../Javascript/Examination.js"></script>
 </body>
