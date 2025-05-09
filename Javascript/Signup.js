@@ -65,12 +65,14 @@ document.getElementById("signupform").addEventListener("submit",function(event){
     };
   
     localStorage.setItem("userData", JSON.stringify(userData));
-    window.location.href = "../Html/Login.html"; 
+      window.location.replace("../Html/Login.html");
   }
 });
 
+let regname=/^[a-zA-Z]{0,15}$/;
 document.getElementById("username").addEventListener("input", function () {
-  if (RegUserName.test(this.value)) errorUsername.textContent = "";
+  if(!regname.test(this.value))  errorUsername.textContent="you must input character only";
+  else errorUsername.textContent = "";
 });
 
 document.getElementById("email").addEventListener("input", function () {
@@ -84,62 +86,3 @@ document.getElementById("password").addEventListener("input", function () {
 document.getElementById("Confirmpassword").addEventListener("input", function () {
   if (this.value === document.getElementById("password").value) errorConfPass.textContent = "";
 });
-
-
-
-
-/////////////login
-
-
-// document.getElementById("loginform").addEventListener("submit",function(event){
-//   event.preventDefault();
- 
-//   const user = JSON.parse(localStorage.getItem("userData"));
-//   emailconf=user.email;
-//   passconf=user.password;
-//   let email=document.getElementById("email-login").value;
-//   if(email.trim()===""){
-//     errorEmail.textContent="you must input your email";
-//   }
-//   else if(!RegEmail.test(email) || email !==  emailconf){
-//     errorEmail.textContent="your email is not vaild";
-//   }else{
-//     errorEmail.textContent="";
-//   }
-
-//   let password=document.getElementById("password-login").value;
-//   if(password.trim()===""){
-//     errorpassword.textContent="you must input your email";
-//   }
-//   else if(!RegPassword.test(password) || password !==  passconf){
-//     errorpassword.textContent="Incorrect password";
-//   }else{
-//     errorpassword.textContent="";
-//   }
-
-//   if (
-//     errorEmail.textContent === "" &&
-//     errorpassword.textContent === ""
-//   ) {
-//     window.location.href = "../Html/Exam.html"; 
-//   }
-// });
-
-// document.getElementById("email-login").addEventListener("input", function () {
-//   if (RegEmail.test(this.value)) errorEmail.textContent = "";
-// });
-
-// document.getElementById("password-login").addEventListener("input", function () {
-//   if (RegPassword.test(this.value)) errorpassword.textContent = "";
-// });
-
-
-
-// استدعاء بصفحه تانيه
-
-// const user = JSON.parse(localStorage.getItem("userData"));
-// if (user) {
-//   document.body.innerHTML = `<h1>مرحباً ${user.username}!</h1><p>بريدك: ${user.email}</p>`;
-// } else {
-//   document.body.innerHTML = "<p>لا توجد بيانات مستخدم محفوظة.</p>";
-// }

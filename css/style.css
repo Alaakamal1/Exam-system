@@ -108,18 +108,22 @@
   height: 100vh;
   background-size: cover;
   display:flexbox;
-  
 }
 .grade-text{
   width: 50%;
   height: 80vh;
   padding: 30px;
   flex-direction: column;
+} 
+.grade-text h1{
+  display: flex;
+  margin:20px;
+  font-size:48px;
 }
 .grade-text h2{
   display: flex;
   margin:50px;
-  font-size:48px;
+  font-size:42px;
 }
 
 .grade-text p{
@@ -132,7 +136,7 @@
   border: 1px solid #4F4D46;
   border-radius: 15px;
   cursor: pointer;
-  margin: 80px;
+  margin: 120px;
   color: #4F4D46;
 }
 .btn-grade a{
@@ -143,32 +147,7 @@
   background-color: #faf5f0d6;
   color: #4f4d46c8;
   border: 1px solid #4f4d46c8;
-
 }
-
-
-.choice-container{
-  display: flex;
-  margin-bottom: 0.5rem;
-  width: 100%;
-  font-size: 1.8rem;
-  border: 1.0 rem solid chocolate;
-  background-color: #EEDECD;
-}
-.choice-container:hover{
-  cursor: pointer;
-  background-color: #e0b689be;
-
-}
-.choice-prefix{
-  padding: 1.5rem 1.2rem;
-  background-color: #E0B689;
-  color: white;
-}
-.choice-text{
-  padding: 1.5rem;
-}
-
 .btntry{
   display: none;
 }
@@ -193,6 +172,34 @@
   }
   .inputform, .btn {
     width: 100%;
+  }
+   .grade-section {
+    height: auto;
+    padding: 20px;
+  }
+
+  .grade-text {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .grade-text h1 {
+    font-size: 28px;
+  }
+
+  .grade-text h2 {
+    font-size: 24px;
+  }
+
+  .grade-text p {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+
+  .btn-grade {
+    width: 100%;
+    margin: 20px 0;
   }
 }
 @media (min-width: 480.99px) and (max-width: 767px) {
@@ -225,6 +232,34 @@
     width: 150%;
     max-width: 400px;
   }
+   .grade-section {
+    height: auto;
+    padding: 30px;
+  }
+
+  .grade-text {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .grade-text h1 {
+    font-size: 36px;
+  }
+
+  .grade-text h2 {
+    font-size: 32px;
+  }
+
+  .grade-text p {
+    font-size: 18px;
+    margin: 30px 0;
+  }
+
+  .btn-grade {
+    width: 80%;
+    margin: 20px auto;
+  }
 }
 @media (min-width: 767.99px) and (max-width: 1024px) {
   .signup-page {
@@ -250,6 +285,35 @@
   .btn {
     width: 60%;
   }
+   .grade-section {
+    height: 100vh;
+    padding: 40px;
+    flex-direction: column;
+  }
+
+  .grade-text {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+  }
+
+  .grade-text h1 {
+    font-size: 42px;
+  }
+
+  .grade-text h2 {
+    font-size: 38px;
+  }
+
+  .grade-text p {
+    font-size: 20px;
+    margin: 40px 0;
+  }
+
+  .btn-grade {
+    width: 70%;
+    margin: 20px auto;
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1366px) {
@@ -259,6 +323,36 @@
   .btn {
     width: 200px;
   }
+   .grade-section {
+    height: 100vh;
+    padding: 60px;
+    flex-direction: column;
+  }
+
+  .grade-text {
+    width: 50%;
+    height: 80vh;
+    padding: 40px;
+  }
+
+  .grade-text h1 {
+    font-size: 48px;
+  }
+
+  .grade-text h2 {
+    font-size: 42px;
+  }
+
+  .grade-text p {
+    font-size: 22px;
+    margin: 50px 0;
+  }
+
+  .btn-grade {
+    width: 60%;
+    margin: 20px auto;
+  }
+
 }
 
 @media (min-width: 1367px) {
@@ -271,5 +365,34 @@
   .btn {
     width: 250px;
   }
-}
+   .grade-section {
+    height: 100vh;
+    padding: 80px;
+    flex-direction: row; 
+  }
 
+  .grade-text {
+    width: 50%;
+    height: 80vh;
+    padding: 60px;
+  }
+
+  .grade-text h1 {
+    font-size: 48px;
+  }
+
+  .grade-text h2 {
+    font-size: 44px;
+  }
+
+  .grade-text p {
+    font-size: 24px;
+    margin: 50px 0;
+  }
+
+  .btn-grade {
+    width: 250px;
+    margin: 30px auto;
+  }
+
+}
