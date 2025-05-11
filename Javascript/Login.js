@@ -33,7 +33,7 @@ document.getElementById("loginform").addEventListener("submit",function(event){
     errorEmail.textContent === "" &&
     errorpassword.textContent === ""
   ) {
-    window.location.replace("../Html/Examination.html");
+    window.location.replace("/Html/Examination.html");
   }
 });
 document.getElementById("email-login").addEventListener("input", function () {
