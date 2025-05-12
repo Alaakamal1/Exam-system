@@ -189,7 +189,6 @@
   .grade-text h2 {
     font-size: 24px;
   }
-
   .grade-text p {
     font-size: 16px;
     margin: 20px 0;
@@ -249,6 +248,7 @@
     font-size: 32px;
   }
 
+  
   .grade-text p {
     font-size: 18px;
     margin: 30px 0;
@@ -302,7 +302,10 @@
   .grade-text h2 {
     font-size: 38px;
   }
-
+  .grade-text h3 {
+    font-size: 28px;
+    margin: 0 50px;
+  }
   .grade-text p {
     font-size: 20px;
     margin: 40px 0;
@@ -339,6 +342,10 @@
 
   .grade-text h2 {
     font-size: 42px;
+  }
+  .grade-text h3 {
+    font-size: 33px;
+    margin: 0 50px;
   }
 
   .grade-text p {
@@ -381,11 +388,17 @@
 
   .grade-text h2 {
     font-size: 44px;
+    margin-left: -20px;
+
+  }
+  .grade-text h3 {
+    font-size: 35px;
+    margin: 0 50px;
   }
 
   .grade-text p {
     font-size: 24px;
-    margin: 50px 0;
+    margin: 50px 70px;
   }
 
   .btn-grade {

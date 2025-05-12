@@ -1,4 +1,4 @@
-let RegUserName=/^[a-zA-Z]{3,15}$/;
+let RegUserName=/^[a-zA-Z]{2,15} [a-zA-Z]{2,15}$/;
 let RegEmail= /^[a-zA-Z0-9]{3,15}@(yahoo|gmail|su.edu.eg)\.com$/;
 let RegPassword=/^[0-9A-Za-z.!@#$%&]{6,20}$/;
 let RegConfPassword=/^[0-9A-Za-z!@#$%&]{6,20}$/;
@@ -11,11 +11,11 @@ let errorConfPass=document.getElementById("error-Confirmpassword");
 
 document.getElementById("signupform").addEventListener("submit",function(event){
   event.preventDefault();
-  let username=document.getElementById("username").value;
+  let username=document.getElementById("username").value.trim();
   if(username.trim()===""){
     errorUsername.textContent="you must input your username";
   }
-  else if(!RegUserName.test(username)){
+  else if(!RegUserName.test(username.trim(""))){
     errorUsername.textContent="you must input character only between 3 to 15 char";
   }else{
     errorUsername.textContent="";
@@ -70,7 +70,7 @@ document.getElementById("signupform").addEventListener("submit",function(event){
 
 let regname=/^[a-zA-Z]{0,15}$/;
 document.getElementById("username").addEventListener("input", function () {
-  if(!regname.test(this.value))  errorUsername.textContent="you must input character only";
+  if(!regname.test(this.value.trim()))  errorUsername.textContent="you must input character only";
   else errorUsername.textContent = "";
 });
 

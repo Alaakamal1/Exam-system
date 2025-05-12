@@ -3,6 +3,7 @@ let texttimeout = document.getElementById('textTimeOut');
 let greating = document.getElementById('textGrating');
 let retrayBtn = document.getElementById("redirect");
 let quote = document.getElementById('textQuote');
+let textScore = document.getElementById('textScore');
 let score = result.score;
 let time = result.timeLeft;
 function success() {
@@ -11,7 +12,8 @@ function success() {
 }
 function failed() {
   greating.textContent = "Sorry, you failed.";
-  quote.textContent = `Your grade is ${score * 10}%  Failing one test doesn’t define your worth.
+  textScore.textContent = `Your grade is ${score * 10}%`;
+  quote.textContent = `  Failing one test doesn’t define your worth.
   You’ve got what it takes this is just a plot twist, not the end of your story.`;
   retrayBtn.classList.remove('btntry');
   retrayBtn.addEventListener('click',function(){
