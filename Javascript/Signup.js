@@ -63,7 +63,6 @@ document.getElementById("signupform").addEventListener("submit",function(event){
       password: password,
       confirmpassword: confPassword
     };
-  
     localStorage.setItem("userData", JSON.stringify(userData));
       window.location.replace("./Html/Login.html");
   }

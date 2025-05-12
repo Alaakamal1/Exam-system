@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: #FFFFFF; */
+  user-select:none;
 }
 .signup-page{
   display: flex;
-  height: 100hv;
+  height: 100vh;
 }
 .sansita-regular {
   font-family: "Sansita", sans-serif;
@@ -61,7 +61,6 @@
 .signup-txt a{
   color: #E0B689;
 }
-
 .form-input{
   width: 100%;
   max-width: 500px;
@@ -125,7 +124,6 @@
   margin:50px;
   font-size:42px;
 }
-
 .grade-text p{
   display: flex;
   margin:100px;

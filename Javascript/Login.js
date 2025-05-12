@@ -2,11 +2,8 @@ let RegEmail= /^[a-zA-Z0-9]{3,15}@(yahoo|gmail|su.edu.eg)\.com$/;
 let RegPassword=/^[0-9A-Za-z.!@#$%&]{6,20}$/;
 let errorEmail=document.getElementById("error-email-login");
 let errorpassword=document.getElementById("error-password-login");
-
-
 document.getElementById("loginform").addEventListener("submit",function(event){
   event.preventDefault();
- 
   const user = JSON.parse(localStorage.getItem("userData"));
   emailconf=user.email;
   passconf=user.password;
