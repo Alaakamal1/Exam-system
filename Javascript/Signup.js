@@ -46,7 +46,7 @@ document.getElementById("signupform").addEventListener("submit",function(event){
     errorConfPass.textContent="you must input Confirmpassword";
   }
   else if(!RegConfPassword.test(confPassword) || password !== confPassword){
-    errorUsername.textContent="The password you entered does not match the confirmation password";
+    errorConfPass.textContent="The password you entered does not match the confirmation password";
   }else{
     errorConfPass.textContent="";
   }

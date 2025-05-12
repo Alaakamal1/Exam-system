@@ -25,7 +25,6 @@ document.getElementById("loginform").addEventListener("submit",function(event){
   }
   else if(!RegPassword.test(password) || password !==  passconf){
     errorpassword.textContent="Incorrect password";
-    errorpassword.textContent="your password must have at least 1 number & 1 char & special letters";
   }else{
     errorpassword.textContent="";
   }
